@@ -1,0 +1,3378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1308</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+  border: 1px solid lightgray;
+  top:-1px; 
+  background: rgb(245, 245, 245);
+} 
+
+QTabBar::tab 
+{
+background: #F5DEB3; 
+border: 1px solid lightgray; 
+padding: 15px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 0px;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 0px;
+} 
+
+QTabBar::tab:selected 
+{ 
+background: rgb(45, 45, 45);
+color: rgb(247, 247, 247);
+margin-bottom: -1px; 
+}
+
+QTreeView {
+    show-decoration-selected: 1;
+}
+
+QTreeView::item {
+     border: 1px solid #d9d9d9;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+QTreeView::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e7effd, stop: 1 #cbdaf1);
+    border: 1px solid #bfcde4;
+}
+
+QTreeView::item:selected {
+    border: 1px solid #567dbc;
+}
+
+QTreeView::item:selected:active{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6ea1f1, stop: 1 #567dbc);
+}
+
+QTreeView::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);
+}
+
+QHeaderView::section {
+color: white;
+padding: 2px;
+height: 40px;
+border: 0px solid #567dbc;
+border-left:0px;
+border-right:0px;
+background: rgb(45, 45, 45);
+}
+
+QTreeWidget::branch 
+{
+	background-color: rgb(237, 237, 237);
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="Dashboard">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QFrame" name="DashboardFrame">
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_56">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_22" stretch="1,20,20,1">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_57">
+               <item>
+                <widget class="QPushButton" name="signout_pb">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Sign out</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>:/images/icons/dashboard/logout.png</normaloff>:/images/icons/dashboard/logout.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="loggedUser_Label">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>------------------</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_92">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(2, 132, 130);</string>
+                 </property>
+                 <property name="text">
+                  <string>أسم المستخدم |</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_93">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap>:/images/icons/dashboard/profile.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="Line" name="line_18">
+               <property name="lineWidth">
+                <number>2</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_21">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_54">
+                 <item>
+                  <widget class="QFrame" name="wellname">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>1</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_39">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_38">
+                      <item>
+                       <widget class="QLabel" name="wellname_ico">
+                        <property name="minimumSize">
+                         <size>
+                          <width>100</width>
+                          <height>100</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>100</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap>:/icons/dashboard/icons8-oil-platform-100.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_14">
+                        <item>
+                         <widget class="QLabel" name="label_77">
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Well Name</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="Line" name="line_2">
+                          <property name="autoFillBackground">
+                           <bool>false</bool>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Plain</enum>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="dashboardWellName_Label">
+                          <property name="styleSheet">
+                           <string notr="true">*
+{
+	color: rgb(1, 130, 131);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>.................................</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="wellname_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>1</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_40">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_41">
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_15">
+                        <item>
+                         <widget class="QLabel" name="label_78">
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Rig Name</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="Line" name="line_8">
+                          <property name="autoFillBackground">
+                           <bool>false</bool>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Plain</enum>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="dashboardRigName_Label">
+                          <property name="styleSheet">
+                           <string notr="true">*
+{
+	color: rgb(1, 130, 131);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>.................................</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="wellname_3">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>1</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_42">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_43">
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_16">
+                        <item>
+                         <widget class="QLabel" name="label_81">
+                          <property name="font">
+                           <font>
+                            <pointsize>14</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Client Name</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="Line" name="line_11">
+                          <property name="autoFillBackground">
+                           <bool>false</bool>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Plain</enum>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="dashboardClientName_Label">
+                          <property name="styleSheet">
+                           <string notr="true">*
+{
+	color: rgb(1, 130, 131);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>.................................</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="Line" name="line_19">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_55">
+                 <item>
+                  <widget class="QFrame" name="wellname_8">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>1</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>500000</width>
+                     <height>4000</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_53">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QCalendarWidget" name="calendarWidget">
+                      <property name="autoFillBackground">
+                       <bool>false</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">*
+{
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	selection-background-color: rgb(1, 130, 131);
+	selection-color: rgb(255, 255, 255);
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+	margin:3px;
+
+}</string>
+                      </property>
+                      <property name="locale">
+                       <locale language="English" country="Malaysia"/>
+                      </property>
+                      <property name="selectedDate">
+                       <date>
+                        <year>2021</year>
+                        <month>11</month>
+                        <day>16</day>
+                       </date>
+                      </property>
+                      <property name="gridVisible">
+                       <bool>true</bool>
+                      </property>
+                      <property name="selectionMode">
+                       <enum>QCalendarWidget::NoSelection</enum>
+                      </property>
+                      <property name="verticalHeaderFormat">
+                       <enum>QCalendarWidget::ISOWeekNumbers</enum>
+                      </property>
+                      <property name="navigationBarVisible">
+                       <bool>true</bool>
+                      </property>
+                      <property name="dateEditEnabled">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_11">
+                   <item row="0" column="0">
+                    <widget class="QFrame" name="wellname_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>1</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_44">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_45">
+                        <item>
+                         <widget class="QLabel" name="tool_ico">
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="pixmap">
+                           <pixmap>:/icons/dashboard/icons8-drilled-well-160.png</pixmap>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <layout class="QVBoxLayout" name="verticalLayout_17">
+                          <item>
+                           <spacer name="verticalSpacer_3">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_83">
+                            <property name="font">
+                             <font>
+                              <pointsize>14</pointsize>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Tool Model/Size</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="Line" name="line_12">
+                            <property name="autoFillBackground">
+                             <bool>false</bool>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Plain</enum>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="dashboardToolSize_Label">
+                            <property name="styleSheet">
+                             <string notr="true">*
+{
+	color: rgb(1, 130, 131);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>.................................</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_6">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QFrame" name="wellname_6">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>1</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_49">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_50">
+                        <item>
+                         <widget class="QLabel" name="label_27">
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="pixmap">
+                           <pixmap>:/images/icons/hash.png</pixmap>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <layout class="QVBoxLayout" name="verticalLayout_19">
+                          <item>
+                           <spacer name="verticalSpacer_9">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_87">
+                            <property name="font">
+                             <font>
+                              <pointsize>14</pointsize>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Tool Address</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="Line" name="line_16">
+                            <property name="autoFillBackground">
+                             <bool>false</bool>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Plain</enum>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="dashboardToolAddress_Label">
+                            <property name="styleSheet">
+                             <string notr="true">*
+{
+	color: rgb(1, 130, 131);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>.................................</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_10">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QFrame" name="wellname_5">
+                     <property name="styleSheet">
+                      <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_46">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_47">
+                        <item>
+                         <widget class="QLabel" name="key_ico">
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="pixmap">
+                           <pixmap>:/icons/dashboard/inclined-key.png</pixmap>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <layout class="QVBoxLayout" name="verticalLayout_18">
+                          <item>
+                           <spacer name="verticalSpacer_7">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_85">
+                            <property name="font">
+                             <font>
+                              <pointsize>12</pointsize>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Last Key No.</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="Line" name="line_13">
+                            <property name="autoFillBackground">
+                             <bool>false</bool>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Plain</enum>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="dashboardLastKey_Label">
+                            <property name="styleSheet">
+                             <string notr="true">*
+{
+	color: rgb(1, 130, 131);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>.................................</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_8">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QFrame" name="wellname_7">
+                     <property name="styleSheet">
+                      <string notr="true">*
+{
+	border-radius: 25px;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 3px;
+}
+
+Line
+{
+	background-color: rgb(121, 121, 121);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_51">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_52">
+                        <item>
+                         <widget class="QLabel" name="memory_ico">
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="pixmap">
+                           <pixmap>:/icons/dashboard/microchip.png</pixmap>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <layout class="QVBoxLayout" name="verticalLayout_20">
+                          <item>
+                           <spacer name="verticalSpacer_11">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_89">
+                            <property name="font">
+                             <font>
+                              <pointsize>12</pointsize>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Last PB Memory Read</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="Line" name="line_17">
+                            <property name="autoFillBackground">
+                             <bool>false</bool>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Plain</enum>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="dashboardLastMemRead_Label">
+                            <property name="styleSheet">
+                             <string notr="true">*
+{
+	color: rgb(1, 130, 131);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>.................................</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_12">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>---------------</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Bills"/>
+      <widget class="QWidget" name="Pay"/>
+      <widget class="QWidget" name="Areas">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="topMargin">
+         <number>20</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>ادخال اليوميات</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="5,1,1">
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="maxVisibleItems">
+             <number>25</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>يومية</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QSpinBox" name="spinBox_4">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="maximum">
+             <number>999999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>قيمة الاصدار الجاري</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_3">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="maximum">
+             <number>999999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>عدد</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="maximum">
+             <number>999999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>قيمة الأصدار الكلى</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="maximum">
+             <number>999999999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>عدد</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_2">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="maxVisibleItems">
+             <number>25</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>المنطقة</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>أضافة أصدار المنطقة</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="DailyAreasTableWidget">
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>المنطقة</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>عدد</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>قيمة الأصدار الكلى</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>عدد</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>قيمة الأصدار الجاري</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="title">
+           <string>اجمالى اليومية (....)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QSpinBox" name="spinBox_5">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>قيمة الاصدار الجاري</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_8">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>عدد</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_7">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>قيمة الأصدار الكلى</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_6">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::NoButtons</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>عدد</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Employees">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>الهيكل الأدارى</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QTabWidget" name="tabWidget_2">
+              <property name="autoFillBackground">
+               <bool>true</bool>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="tab_5">
+               <attribute name="title">
+                <string>مجلس الادارة</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QTreeWidget" name="treeWidget">
+                  <property name="autoFillBackground">
+                   <bool>true</bool>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="locale">
+                   <locale language="Arabic" country="Egypt"/>
+                  </property>
+                  <property name="itemsExpandable">
+                   <bool>true</bool>
+                  </property>
+                  <property name="expandsOnDoubleClick">
+                   <bool>false</bool>
+                  </property>
+                  <attribute name="headerHighlightSections">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="headerShowSortIndicator" stdset="0">
+                   <bool>true</bool>
+                  </attribute>
+                  <column>
+                   <property name="text">
+                    <string>الوظيفة</string>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <underline>false</underline>
+                    </font>
+                   </property>
+                   <property name="textAlignment">
+                    <set>AlignCenter</set>
+                   </property>
+                   <property name="background">
+                    <color>
+                     <red>255</red>
+                     <green>255</green>
+                     <blue>255</blue>
+                    </color>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>0</green>
+                      <blue>0</blue>
+                     </color>
+                    </brush>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>المسؤول</string>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <underline>false</underline>
+                     <strikeout>false</strikeout>
+                    </font>
+                   </property>
+                   <property name="textAlignment">
+                    <set>AlignCenter</set>
+                   </property>
+                   <property name="background">
+                    <color alpha="0">
+                     <red>255</red>
+                     <green>255</green>
+                     <blue>255</blue>
+                    </color>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>0</green>
+                      <blue>0</blue>
+                     </color>
+                    </brush>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>الكود</string>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="textAlignment">
+                    <set>AlignCenter</set>
+                   </property>
+                  </column>
+                  <item>
+                   <property name="text">
+                    <string>رئيس مجلس الأدارة والعضو المنتدب</string>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>16</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="background">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="0">
+                      <red>156</red>
+                      <green>156</green>
+                      <blue>156</blue>
+                     </color>
+                    </brush>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>0</green>
+                      <blue>127</blue>
+                     </color>
+                    </brush>
+                   </property>
+                   <property name="text">
+                    <string>مدحت فودة</string>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>16</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                     <underline>false</underline>
+                    </font>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>0</green>
+                      <blue>127</blue>
+                     </color>
+                    </brush>
+                   </property>
+                   <property name="text">
+                    <string>0x00000001</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>قطاعات شبكات التوزيع والأضاءة العامة</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>سلوى</string>
+                    </property>
+                    <property name="text">
+                     <string>0x00000002</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>قطاع شبكات توزيع المنتزة</string>
+                     </property>
+                     <property name="background">
+                      <brush brushstyle="NoBrush">
+                       <color alpha="255">
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                       </color>
+                      </brush>
+                     </property>
+                     <property name="foreground">
+                      <brush brushstyle="NoBrush">
+                       <color alpha="255">
+                        <red>170</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                       </color>
+                      </brush>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000012</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع ابوقير وسيدى بشر</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000112</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع المندرة وخورشيد</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000212</string>
+                      </property>
+                     </item>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع شبكات توزيع وسط</string>
+                     </property>
+                     <property name="foreground">
+                      <brush brushstyle="NoBrush">
+                       <color alpha="255">
+                        <red>170</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                       </color>
+                      </brush>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000022</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع الابراهيمية وسموحة</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000122</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع وسط</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000222</string>
+                      </property>
+                     </item>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع شبكات توزيع شرق</string>
+                     </property>
+                     <property name="foreground">
+                      <brush brushstyle="NoBrush">
+                       <color alpha="255">
+                        <red>170</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                       </color>
+                      </brush>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000032</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع السيوف وابيس</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000132</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع سابا باشا وباكوس</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000232</string>
+                      </property>
+                     </item>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع شبكات توزيع غرب</string>
+                     </property>
+                     <property name="foreground">
+                      <brush brushstyle="NoBrush">
+                       <color alpha="255">
+                        <red>170</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                       </color>
+                      </brush>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000042</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع القبارى والدخيلة</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000142</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع العامرية</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000242</string>
+                      </property>
+                     </item>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع شبكات توزيع الساحل الشمالى</string>
+                     </property>
+                     <property name="foreground">
+                      <brush brushstyle="NoBrush">
+                       <color alpha="255">
+                        <red>170</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                       </color>
+                      </brush>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000052</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع الساحل الشمالى والعجمى</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000152</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة لشبكات توزيع الحمام وبرج العرب</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000252</string>
+                      </property>
+                     </item>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الاضاءة العامة</string>
+                     </property>
+                     <property name="foreground">
+                      <brush brushstyle="NoBrush">
+                       <color alpha="255">
+                        <red>170</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                       </color>
+                      </brush>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000062</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة للأضاءة العامة شرق</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000162</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة للأضاءة العامة وسط وغرب</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000262</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>الادارة العامة للأضاءة العامة الساحل الشمالى</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0x00000362</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>قطاعات التشغيل</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>ايهاب الفقى</string>
+                    </property>
+                    <property name="text">
+                     <string>0x00000003</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>قطاع التشغيل والتحكم</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000013</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الخطوط والكابلات</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000023</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الوقاية والموزعات</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000033</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الاتصالات</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000043</string>
+                     </property>
+                    </item>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>قطاعات الشئون الفنية</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="text">
+                     <string>0x00000004</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الدراسات والتطوير</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000014</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الدراسات</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000024</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع العدادات</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000034</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الامداد والتموين</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000044</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع المشروعات</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000054</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الاحلال والتجديد وتطوير الشبكة</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000064</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع النقل والورش</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000074</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع السلامة والصحة المهنية والدفاع المدنى</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000084</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع البحوث والجودة وترشيد استخدام الطاقة الكهربائية</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000094</string>
+                     </property>
+                    </item>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>قطاعات الشئون التجارية</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>احمد احمد</string>
+                    </property>
+                    <property name="text">
+                     <string>0x00000005</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الشئون التجارية المنتزة</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000015</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الشئون التجارية شرق</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000025</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الشئون التجارية وسط</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000035</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الشئون التجارية غرب</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000045</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الشئون التجارية الساحل الشمالى</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000055</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الشئون التجارية لكبار المشتركين</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000065</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الاحصاء والحسابات الالية والبحوث</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000075</string>
+                     </property>
+                    </item>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>قطاعات الشئون المالية والموارد البشرية</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>علاء عبد العليم</string>
+                    </property>
+                    <property name="text">
+                     <string>0x00000006</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الشئون المالية</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000016</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع التكاليف</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000026</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع الموارد البشرية</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000036</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>قطاع التدريب</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>0x00000046</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_6">
+               <attribute name="title">
+                <string> القطاعات</string>
+               </attribute>
+              </widget>
+              <widget class="QWidget" name="tab_7">
+               <attribute name="title">
+                <string>الأدارات العامة</string>
+               </attribute>
+              </widget>
+              <widget class="QWidget" name="tab_8">
+               <attribute name="title">
+                <string>الأدارات الفرعية</string>
+               </attribute>
+              </widget>
+              <widget class="QWidget" name="tab_9">
+               <attribute name="title">
+                <string>الأقسام</string>
+               </attribute>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>أضافة موظف</string>
+           </attribute>
+           <widget class="QLabel" name="label_14">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>70</y>
+              <width>101</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>الرقم القومى</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_15">
+            <property name="geometry">
+             <rect>
+              <x>760</x>
+              <y>120</y>
+              <width>47</width>
+              <height>14</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>الجنس</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="id">
+            <property name="geometry">
+             <rect>
+              <x>392</x>
+              <y>70</y>
+              <width>331</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_16">
+            <property name="geometry">
+             <rect>
+              <x>760</x>
+              <y>160</y>
+              <width>47</width>
+              <height>14</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>تاريخ ميلاد</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_17">
+            <property name="geometry">
+             <rect>
+              <x>760</x>
+              <y>200</y>
+              <width>47</width>
+              <height>14</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>المحافظة</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="gender">
+            <property name="geometry">
+             <rect>
+              <x>390</x>
+              <y>120</y>
+              <width>331</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="bod">
+            <property name="geometry">
+             <rect>
+              <x>390</x>
+              <y>160</y>
+              <width>331</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="gov">
+            <property name="geometry">
+             <rect>
+              <x>390</x>
+              <y>200</y>
+              <width>331</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>قائمة الموظفين</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>ارشيف التنقلات</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Operations"/>
+      <widget class="QWidget" name="Reports"/>
+      <widget class="QWidget" name="Settings"/>
+      <widget class="QWidget" name="About"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="SidePanelBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="accessibleName">
+       <string>SidePanelButtons</string>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#SidePanelWidgetContents
+{
+margin: 0px;
+padding: 0px;
+background-color: rgb(45, 45, 45);
+border: none;
+margin: 0px;
+}
+
+QWidget#SidePanelWidgetContents &gt; QPushButton
+{
+margin: 0px;
+min-height: 30px;
+}
+
+QGroupBox
+{
+	color: rgb(255, 255, 255);
+	background-color: rgb(45, 45, 45);
+	padding: 1px;
+	border:0px;
+    border-radius: 0px;
+	margin: 0px;
+}
+
+
+QPushButton
+{
+	
+background-color: rgb(45, 45, 45);
+border: none;
+color: rgb(241, 241, 241);
+margin: 0px;
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 10px;
+padding-right: 30px;
+padding-top: 2px;
+padding-bottom: 2px;
+text-align:left;
+
+}
+
+
+QPushButton:disabled
+{ 
+background-color: rgba(57, 65, 71, 0.4);  
+}
+
+QPushButton:focus:pressed,
+QPushButton:pressed
+{ 
+background-color:  rgba(2, 102, 100, 0.4);  ; 
+}
+
+QPushButton:checked
+{ 
+background-color: #018283;
+color: rgb(255, 255, 255);
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+QPushButton:hover:!focus
+{ 
+background-color: rgba(60, 60, 60, 1); 
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+
+
+
+QScrollBar:vertical
+{           
+border: 1px solid #999999;
+background:white;
+width:3px;    
+margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical 
+{
+background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+stop: 0 rgb(178, 140, 64), stop: 0.5 rgb(178, 140, 64), stop:1 rgb(178, 140, 64));
+ min-height: 0px;
+}
+
+QScrollBar::add-line:vertical 
+{
+background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+stop: 0 rgb(178, 140, 64), stop: 0.5 rgb(178, 140, 64),  stop:1 rgb(178, 140, 64));
+height: 0px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical 
+{
+background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+stop: 0  rgb(178, 140, 64), stop: 0.5 rgb(178, 140, 64),  stop:1 rgb(178, 140, 64));
+height: 0 px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QGroupBox" name="SidePanelHead">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>185</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>13</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="sidepanelLogo">
+                  <property name="minimumSize">
+                   <size>
+                    <width>50</width>
+                    <height>120</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>120</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="resources.qrc">:/images/images/logos/AEDCicon.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>false</bool>
+                  </property>
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <property name="indent">
+                   <number>-1</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>18</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">*
+{
+	border-radius: 10;
+	background-color: #C0E1E0;
+	
+	color: rgb(0, 0, 0);
+}</string>
+                </property>
+                <property name="text">
+                 <string>v.1.0.0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="SidePanelWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>230</width>
+            <height>473</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_23">
+           <property name="spacing">
+            <number>1</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="Menu_Dashboard_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>القائمة الرئيسية</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>true</bool>
+             </property>
+             <property name="default">
+              <bool>true</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_Bills_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string>الأصدارات</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_Pay_PB">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>السداد</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_Areas_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>مناطق ويوميات</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_Employees_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>الموظفين</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_Operations_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>الحملات</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_Reports_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>اعداد التقارير</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_Settings_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>الاعدادات</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Menu_About_PB">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>عن البرنامج</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="statusVerticalLayout">
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="Line" name="line_15">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sidePanelConnectionLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>MS Shell Dlg 2</family>
+               <pointsize>12</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">*
+{
+background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+border-radius: 15px;
+border : 1px solid rgb(244, 244, 244);
+padding: 0px;
+text-align: center;
+}</string>
+             </property>
+             <property name="text">
+              <string>غير متصل</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

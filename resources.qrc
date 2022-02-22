@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/logos/AEDCicon.png</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>lib/QtAwesome/fonts/fontawesome-4.7.0.ttf</file>
+    </qresource>
+</RCC>
